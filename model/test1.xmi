@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmsassociation:Plateforme
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cmsassociation="http://fr.ubo.mde.meddous.cmsassociation"
+    xsi:schemaLocation="http://fr.ubo.mde.meddous.cmsassociation cmsassociation.ecore"
+    nom="Iroise Action Solidaire">
+  <associations
+      id="1"
+      email=" "
+      nom="Iroise Action Solidaire"
+      numTel="0781276243"
+      adresse="09 rue du leon">
+    <utilisateurs
+        id="1"
+        actif="true"
+        email="celiacici430@gmail.com"
+        nomComplet="Celia MEDDOUS"/>
+    <utilisateurs
+        id="2"
+        actif="true"
+        email="Celia.meddous@etudiant.univ-brest.fr"
+        nomComplet="celia cici"/>
+    <roles id="1"
+        actif="true"
+        nom="Referent"/>
+    <roles id="2"
+        actif="true"
+        nom="Benevole"/>
+    <roles id="1"
+        nom="referent"/>
+  </associations>
+</cmsassociation:Plateforme>
