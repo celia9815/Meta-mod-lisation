@@ -1,0 +1,17 @@
+# Eclipse / Obeo
+.project
+.classpath
+.settings/
+META-INF/
+
+# Build
+bin/
+target/
+
+# Obeo view + generator
+*.aird
+*.genmodel
+
+# OS
+.DS_Store
+Thumbs.db
