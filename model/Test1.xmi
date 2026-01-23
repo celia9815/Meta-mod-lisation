@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmsassociation:Plateforme
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cmsassociation="http://fr.ubo.mde.meddous.cmsassociation"
+    xsi:schemaLocation="http://fr.ubo.mde.meddous.cmsassociation cmsassociation.ecore"
+    nom="CMS Association">
+  <associations
+      id="1"
+      nom="Iroise Action Solidaire"
+      numTel="0781276243"
+      adresse="25 rue lyon, Brest">
+    <formulaires
+        id="1"
+        actif="true"
+        nom="Inscription"
+        description="Formulaire d'insciprion des nouveaux utilisateurs">
+      <champs
+          id="1"
+          actif="true"
+          libelle="nom"
+          type="TEXT"
+          obligatoire="true"/>
+      <champs
+          id="2"
+          actif="true"
+          libelle="Prénom"
+          type="TEXT"
+          obligatoire="true"/>
+      <champs
+          id="3"
+          actif="true"
+          libelle="Date naissance"
+          type="DATE"
+          obligatoire="true"/>
+      <champs
+          libelle="adresse"
+          type="TEXT"
+          obligatoire="true"/>
+    </formulaires>
+    <demandes
+        id="1"
+        reference="INS-2026-001"
+        formulaire="//@associations.0/@formulaires.0">
+      <reponses
+          id="1"
+          valeur="Celiaa"
+          champ="//@associations.0/@formulaires.0/@champs.0"/>
+      <reponses
+          id="2"
+          valeur="MEDDOUS"
+          champ="//@associations.0/@formulaires.0/@champs.1"/>
+      <reponses
+          id="3"
+          valeur="29-11-2001"
+          champ="//@associations.0/@formulaires.0/@champs.2"/>
+      <reponses
+          id="4"
+          valeur="09 rue du leon"
+          champ="//@associations.0/@formulaires.0/@champs.3"/>
+    </demandes>
+    <utilisateurs
+        id="1"
+        actif="true"
+        email="celiacici430@gmail.com"
+        nomComplet="Celia MEDDOUS"
+        role="//@associations.0/@roles.0"/>
+    <utilisateurs
+        id="2"
+        actif="true"
+        email="celia.meddous@etudiant.univ-brest.fr"
+        nomComplet="celia cici"
+        role="//@associations.0/@roles.1"/>
+    <roles id="1"
+        nom="referent"/>
+    <roles id="2"
+        nom="bénévole"/>
+    <roles id="3"
+        nom="bienfaiteur"/>
+  </associations>
+  <associations
+      id="2"
+      email=""
+      nom="DZ brest"
+      numTel="0781276243"
+      adresse="09 rue du léon"/>
+</cmsassociation:Plateforme>
