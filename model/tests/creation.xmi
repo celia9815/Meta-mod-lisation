@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmsassociation:Plateforme
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cmsassociation="http://fr.ubo.mde.meddous.cmsassociation"
+    xsi:schemaLocation="http://fr.ubo.mde.meddous.cmsassociation ../cmsassociation.ecore">
+  <associations
+      id="1"
+      email="celiacici430@gmail.com"
+      nom="Iroise Actions Solidaires"
+      numTel="0781276243"
+      adresse="9 rue du léon">
+    <utilisateurs
+        id="1"
+        actif="true"
+        email="celia.meddous@gmail.com"
+        nomComplet="Celia MEDDOUS"
+        role="//@associations.0/@roles.0"/>
+    <utilisateurs
+        email=""
+        nomComplet="HJJ"
+        role="//@associations.0/@roles.0"/>
+    <roles id="1"
+        nom="referent"/>
+    <pages titre="Accueil"
+        dateCreation="2026-01-30T00:00:00.000+0100"
+        slug="www.association.fr/accueil"
+        contenu="Bienvenue sur le site officiel de notre association.&#xA;Nous œuvrons pour des actions solidaires à Brest.&#xA;"/>
+    <pages titre=" À propos"
+        publie="true"
+        dateCreation="2026-01-30T00:00:00.000+0100"
+        slug="A propos"
+        contenu="Notre association œuvre pour le développement de projets solidaires et sociaux.&#xA;Nous accompagnons les personnes en difficulté et organisons des actions de sensibilisation.&#xA;&#xA;Créée par des bénévoles engagés, notre mission est de renforcer la solidarité locale&#xA;et de favoriser l'entraide au sein de la communauté.&#xA;&#xA;Rejoignez-nous pour participer à nos actions et construire ensemble un avenir meilleur.&#xA;"/>
+    <articles
+        titre="Projet "
+        publie="true"
+        dateCreation="2025-01-01T00:00:00.000+0100"
+        slug="www.association.fr/articles/new project-2026&#xA;"
+        datePublication="2026-01-29T00:00:00.000+0100"
+        contenu="Bonjour tout le monde : j'ai le plaisir de vous annocer le nouveau projet qui sera lancer à partir du mois prochain"
+        auteur="//@associations.0/@utilisateurs.0"/>
+    <medias
+        nom="Déroulement du projet et plus d'info"
+        type="PDF"/>
+  </associations>
+</cmsassociation:Plateforme>

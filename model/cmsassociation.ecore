@@ -2,6 +2,14 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cmsassociation" nsURI="http://fr.ubo.mde.meddous.cmsassociation"
     nsPrefix="cmsassociation">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Entite" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="actif" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -27,7 +35,14 @@
         eType="#//Media" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Utilisateur" eSuperTypes="#//Entite">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="EmailNonVide EmailFormatValide"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="EmailNonVide" value="&#xA;  &#x9;&#x9;&#x9;self.email &lt;> ''"/>
+      <details key="EmailFormatValide" value="&#xA;            self.email.matches('.*@.*')"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomComplet" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"/>
@@ -40,8 +55,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="champs" lowerBound="1"
         upperBound="-1" eType="#//Champ" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="association" eType="#//Association"
-        containment="true" eOpposite="#//Association/formulaires"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="association" lowerBound="1"
+        eType="#//Association" eOpposite="#//Association/formulaires"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Champ" eSuperTypes="#//Entite">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="libelle" lowerBound="1"

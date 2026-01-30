@@ -1,0 +1,13 @@
+import 'cmsassociation.ecore'
+
+package cmsassociation
+
+context Entite
+--
+-- example invariant with a custom error message to verify that
+-- the 'id' property of all 'cmsassociation::Entite' instances is non-null
+--
+inv NonNull_id('The \'id\' property of "' + self.toString() + '" is null'):
+	id <> null
+
+endpackage
